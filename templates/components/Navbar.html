@@ -1,0 +1,89 @@
+<!-- Header  -->
+<header
+    class="shadow-sm py-2 rounded-full border border-zinc-200 mt-2 bg-inherit"
+>
+    <div class="container flex items-center mx-auto px-4 justify-between">
+        <!-- logo -->
+        <a href="#">
+            <img
+                src="{{url_for('static', filename='images/Profile.png')}}"
+                alt="Profile Picture"
+                class="rounded-full w-10 h-10"
+                loading="lazy"
+            />
+        </a>
+
+        <!-- NavLink -->
+        <nav
+            id="mobile-menu"
+            class="absolute top-[72px] bg-zinc-50 border border-zinc-200 rounded-xl max-w-[312px] left-1 w-full hidden px-4"
+        >
+            <ul class="block md:flex md:space-x-7">
+                <li
+                    class="group boder-b-[1px] border-zinc-100 pb-3 pt-2 flex items-center justify-between"
+                >
+                    <h2 class="text-teal-500 font-medium text-lg">
+                        Navigation
+                    </h2>
+                    <i
+                        id="close-button"
+                        class="uil uil-times text-xl text-zinc-700"
+                    ></i>
+                </li>
+                <li class="group py-3 border-b-[1px] border-zinc-200">
+                    <a
+                        href="#"
+                        class="no-underline text-base font-medium text-zinc-900 hover:text-teal-500"
+                        >About</a
+                    >
+                </li>
+                <li class="group py-3 border-b-[1px] border-zinc-200">
+                    <a
+                        href="#"
+                        class="no-underline text-base font-medium text-zinc-900 hover:text-teal-500"
+                        >Projects</a
+                    >
+                </li>
+                <li class="group py-3 border-b-[1px] border-zinc-200">
+                    <a
+                        href="#"
+                        class="no-underline text-base font-medium text-zinc-900 hover:text-teal-500"
+                        >Articles</a
+                    >
+                </li>
+                <li class="group py-3">
+                    <a
+                        href="#"
+                        class="no-underline text-base font-medium text-zinc-900 hover:text-teal-500"
+                        >Uses</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <!-- Mobile Menu Button -->
+            <button
+                id="menu-button"
+                class="px-4 py-2 rounded-full border border-zinc-200 shadow-sm text-zinc-700 font-medium hover:bg-zinc-50 transition-colors md:hidden"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <!-- Dark Mode Toggle -->
+            <button
+                id="dark-toggle"
+                class="px-3 py-1 rounded-full shadow-sm border-zinc-200 border"
+                aria-label="Toggle dark mode"
+            >
+                <i
+                    id="dark-icon"
+                    class="uil uil-moonset text-2xl text-zinc-700 hover:text-teal-500 transition-colors"
+                ></i>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- Header -->

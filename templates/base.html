@@ -10,7 +10,7 @@
             href="{{url_for('static', filename='css/output.css')}}"
         />
 
-        <!-- Icon -->
+        <!-- FontAwesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,15 +19,21 @@
             referrerpolicy="no-referrer"
         />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- IconScout -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
         />
     </head>
-    <body>
-        {% block content %} {%endblock%}
+    <body class="bg-zinc-50 font-sans">
+        <main class="max-w-6xl mx-auto border-x-[1px] border-neutral-300">
+            <!-- Navigation Bar -->
+            {%include "components/Navbar.html"%}
+            <!-- Main Content -->
+            {% block content %} {%endblock%}
+            <!-- Footer -->
+        </main>
     </body>
+
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
 </html>
